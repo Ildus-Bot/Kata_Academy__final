@@ -1,0 +1,137 @@
+$gray: #7E7E82;
+$black: #1B1C21;
+$pink: #FF3E79;
+$light-gray: #EAEAEA;
+
+$font-regular: "TT Lakes Regular";
+$font-medium: "TT Lakes Medium";
+$font-bold: "TT Lakes Bold";
+$font-glypghter: "Glyphter";
+
+.modal-window {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 24px 16px;
+    background-color: white;
+    transform: translateX(100vw);
+    transition: transform ease-out 0.3s;
+    z-index: 100;
+    
+    &__button-close {
+        box-sizing: border-box;
+        margin-bottom: 32px;
+        padding-top: 4px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-family: $font-bold;
+        font-size: 26px;
+    }
+
+    &__header {
+        position: relative;
+        left: -16px;
+        margin-bottom: 24px;
+    }
+}
+
+.form {
+    &__name {
+        padding: 12px 16px;
+        height: 48px;
+        width: 100%;
+        font-family: $font-medium;
+        font-size: 16px;
+        letter-spacing: -0.02px;
+        border-radius: 8px;
+        border: 1px solid $light-gray;
+        margin-bottom: 16px;
+    }
+
+    &__tel {
+        padding: 12px 16px;
+        height: 48px;
+        width: 100%;
+        font-family: $font-medium;
+        font-size: 16px;
+        letter-spacing: -0.02px;
+        border-radius: 8px;
+        border: 1px solid $light-gray;
+        margin-bottom: 16px;
+    }
+
+    &__email {
+        padding: 12px 16px;
+        height: 48px;
+        width: 100%;
+        font-family: $font-medium;
+        font-size: 16px;
+        letter-spacing: -0.02px;
+        border-radius: 8px;
+        border: 1px solid $light-gray;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        padding: 12px 16px;
+        height: 118px;
+        width: 100%;
+        font-family: $font-medium;
+        font-size: 16px;
+        letter-spacing: -0.02px;
+        border-radius: 8px;
+        line-height: 24px;
+        border: 1px solid $light-gray;
+        margin-bottom: 16px;
+    }
+
+    &__link {
+        color: $pink;
+        text-decoration: none;
+    }
+
+    &__instruction {
+        font-family: $font-regular;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
+        margin-bottom: 19px;
+    }
+
+    &__submit {
+        border: none;
+        display: block;
+        width: 136px;
+        padding: 0;
+        padding-right: 15px;
+        background-position: 95% 50%;
+        font-family: $font-bold;
+        font-size: 12px;
+        font-weight: 700;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-window--middle-window--other {
+        width: 440px;
+        padding: 40px 32px
+    }
+
+    .title--middle-window--left-more {
+        left: -32px;
+    }
+
+    .title__line--middle-window--margin-more {
+        margin-right: 28px;
+    }
+
+    .modal-window__button-close--middle-window--relative-left {
+        position: relative;
+        left: -100px
+    }
+}
