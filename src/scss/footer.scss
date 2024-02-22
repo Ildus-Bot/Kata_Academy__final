@@ -1,0 +1,56 @@
+@import './swiper-other.scss';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 16px;
+    font-family: $font-medium;
+    font-size: 14px;
+    color: $gray;
+
+    &__text-one {
+        margin-bottom: 16px;
+    }
+
+    &__text-two {
+        margin-bottom: 16px;
+    }
+
+    &__text-three {
+        margin-bottom: 19px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__text-one {
+            text-align: left;
+        }
+
+        &--middle-window--another {
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 24px;
+        }
+        
+        &--middle-window--width-more {
+            max-width: 215px;
+            text-align: right;
+        }
+
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer {
+
+        &--large-window--margin-more {
+            margin: 0 32px;
+        }
+
+        &--large-window--more {
+            max-width: 330px;
+        }       
+    }
+}
