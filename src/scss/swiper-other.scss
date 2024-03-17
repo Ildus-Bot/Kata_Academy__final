@@ -1,0 +1,308 @@
+@import './Glyphter.css';
+
+$gray: #7E7E82;
+$black: #1B1C21;
+$pink: #FF3E79;
+$light-gray: #EAEAEA;
+
+$font-regular: "TT Lakes Regular";
+$font-medium: "TT Lakes Medium";
+$font-bold: "TT Lakes Bold";
+$font-glypghter: "Glyphter";
+
+.brand-slide {
+    &--other {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        max-width: 260px;
+        height: auto;
+        position: relative;
+    }
+    
+    &__title {
+        display: block;
+        font-family: $font-medium;
+        font-weight: 400;
+        color: $gray;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+
+    &__description {
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 14px;
+        color: black;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    &__text-price {
+        font-family: $font-medium;
+        font-weight: 400;
+        color: gray;
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+
+    &__price {
+        font-family: $font-regular;
+        font-weight: 400;
+        color: black;
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    &__text-time {
+        font-family: $font-medium;
+        font-weight: 400;
+        font-size: 14px;
+        color: gray;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+
+    &__time {
+        font-family: $font-regular;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0;
+        color: black;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    
+
+    // &__button-order::after {
+    //     content: '';
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 4px;
+    //     right: 10px;
+    //     width: 24px;
+    //     height: 24px;
+    //     background-image: url(../img/arrow-right.svg);
+    //     background-size: 100%;
+    // }
+
+    &__block--padding-top--more {
+        padding: 16px;
+    }
+
+    &__block--position--relative {
+        position: relative;
+    }
+}
+
+.button-order {
+    display: inline-block;
+    width: 119px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $pink;
+    color: white;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding-top: 4px;
+    padding-left: 12px;
+    background-image: url(../img/arrow-right.svg);
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+}
+
+.brand-slider {
+    &__container-header {
+        display: none;
+        align-items: center;
+        margin: 0 40px;
+    }
+
+    &__container-title {
+        font-family: $font-medium;
+        font-size: 14px;
+        color: $gray;
+        min-width: 350px;
+    }
+
+    &__header-price {
+        font-family: $font-medium;
+        font-size: 14px;
+        color: $gray;
+        min-width: 75px;
+        margin-left: auto;
+    }
+
+    &__header-time {
+        font-family: &$font-medium;
+        font-size: 14px;
+        color: $gray;
+        min-width: 81px;
+        margin-left: auto;
+    }
+
+    &__empty-block {
+        width: 119px;
+        margin-left: auto;
+    }
+
+    &__wrapper--large-window--indent-another {
+        padding: 0 16px;
+    }
+
+    &__about-price {
+        font-family: $font-regular;
+        font-size: 14px;
+        color: $black;
+        margin-bottom: 15px;
+        line-height: 20px;
+        margin-left: 16px;
+        letter-spacing: 0.2px;
+        max-width: 460px;
+        padding-right: 30px;
+    }
+
+    &__get-order {
+        display: inline-block;
+        text-decoration: none;
+        font-family: $font-medium;
+        font-weight: 600;
+        color: $black;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 16px;
+        margin-bottom: 40px;
+    }
+
+    &__arrow-right {
+        position: relative;
+        top: 3px;
+        font-family: $font-glypghter;
+        color: $pink;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .brand-slider { 
+        &__container-header--medium-window--visible {
+            display: flex;
+        }
+
+        &__wrapper--medium-window--other {
+            display: block;
+            width: auto;
+            background-color: #FFFFFF;
+            margin: 0 24px;
+        }
+
+        &__about-price--medium-window--margin-more {
+            margin-left: 24px;
+        }
+
+        &__get-order--medium-window--margin-more {
+            margin-left: 24px;
+        }
+    }
+
+    .brand-slide {
+        &--medium-window--other {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 64px;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $light-gray;
+            max-width: 100%;
+            padding: 16px 0;
+        }
+
+        &__title  { 
+            display: none;
+            margin: 0;
+        }
+
+        &__time-and-order-container {
+            align-items: center;
+        }
+
+        &__time {
+            margin: 0;
+            display: inline-block;
+            min-width: 81px;
+            margin-left: auto;
+        }
+    
+        &__description {
+            margin: 0;
+            display: inline-block;
+            min-width: 350px;
+        }
+    
+        &__text-price {
+            display: none;
+            margin: 0;
+        }
+    
+        &__price {
+            margin: 0;
+            display: inline-block;
+            min-width: 75px;
+            margin-left: auto;
+        }
+    
+        &__text-time {
+            display: none;
+            margin: 0;
+        }
+    
+        &__time-and-order-container {
+            margin: 0;
+        }
+    }
+
+    .button-order {
+        margin-left: auto;
+
+        &--medium-window--relative-little {
+            position: relative;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .brand-slider {
+
+        &__wrapper--large-window--margin-more {
+            margin: 0px 32px;
+        }
+
+        &__container--large-window--margin-more {
+            margin: 0 48px;
+        }
+
+        &__about-price--large-window--margin-more {
+            margin-left: 32px;
+        }
+        
+        &__get-order--large-window--margin-more {
+            margin-left: 32px;
+        }
+    }
+
+   
+}

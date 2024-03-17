@@ -1,0 +1,218 @@
+.menu {
+    width: 100vw;
+    height: 100vh;
+    padding: 18px 24px;
+    float: left;
+    background-color: white;
+    box-shadow: 1px 0 70px 0 #AFAEAE;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transition: transform ease-out 0.3s;
+    transform: translateX(-100vw);
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 46px;
+}
+
+.menu__header-logo {
+    line-height: 0;
+}
+
+.button {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    border: none;
+    transition: all 0.2s ease-out;
+}
+
+.button:hover, .button:focus {
+    opacity: 0.8;
+}
+
+.menu__header-button-close {
+    padding-top: 4px;
+    margin-right: 17px;
+}    
+
+.menu__header-button-search {
+    padding-top: 4px; 
+    margin-left: auto;
+}
+
+/*********************************************************************8*/
+
+.menu__navigation {
+    margin-bottom: auto;
+}
+
+.menu__navigation-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu__navigation-item {
+    margin-bottom: 32px;
+}
+
+.menu__navigation-link {
+    position: relative;
+    text-decoration: none;
+    color: #1B1C21;
+    transition: all 0.2s ease-out;
+}
+
+
+.menu__navigation-link:hover, .menu__navigation-link:focus {
+    color: #7E7E82;
+}
+
+.menu__navigation-link--active {
+    color: #7E7E82;
+}
+
+.menu__navigation-link--active::after {
+    display: block;
+    height: 32px;
+    width: 4px;
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='32' viewBox='0 0 4 32' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V32C2.20914 32 4 30.2091 4 28V4Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/********************************************************************/
+
+.menu__contact {
+    margin-bottom: 40px;
+}
+
+.menu__contact-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 152px;
+    margin-bottom: 16px;
+
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FF3E79;
+    border: none;
+    transition: all 0.2s ease-out;
+}
+
+.menu__contact-link-phone > img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.menu__contact-link-message > img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+.menu__contact-link-person > img {
+    position: absolute; 
+    top: 10px;
+    left: 10px;
+}
+
+.menu__contact-mail {
+    margin-bottom: 12px;
+}
+
+.menu__contact-phone {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+
+/************************************************************/
+
+.menu__choose-language-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 87px;
+    padding: 0;
+}
+
+.menu__choose-language-link {
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    color: #1B1C21;
+}
+
+.menu__choose-language-link:hover {
+    color: #7E7E82;
+}
+
+.menu__choose-language-link--active {
+    color: #7E7E82;
+}
+
+.menu__background {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border: none;
+    z-index: 5;
+    opacity: 0;
+    transition: all ease-out 0.3s;
+}
+
+@media(min-width: 768px) {
+    .menu--middle-window--width-320px {
+        width: 320px;
+    }
+}
+
+@media(min-width: 1440px) {
+    .menu {
+        &--large-window--other {
+            height: auto;
+            position: static;
+            box-shadow: none;
+            transform: translateX(0);
+            z-index: 2;
+        }
+
+        &__navigation--large-window--margin-bottom-little {
+            margin-bottom: 140px;
+        }
+        
+        &__choose-language {
+            margin-bottom: auto;
+        }
+
+        &__header-button-close--large-window--hidden {
+            display: none;
+        }
+    }
+}
+
